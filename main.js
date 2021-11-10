@@ -23,9 +23,9 @@ const btnEnviar = $(".btn btn-primary");
 const contactList = $("contact-list");
 
 $("#enviarBtn").on("click", function () {
-  const nombre = nameInput.value;
-  const numero = numberWsp.value;
-  const descripcion = description.value;
+  const nombre = nameInput[0].value;
+  const numero = numberWsp[0].value;
+  const descripcion = description[0].value;
 
   const contact = new Contact(nombre, numero, descripcion);
   create(contact);
@@ -34,6 +34,6 @@ $("#enviarBtn").on("click", function () {
 for (let contact of contacts) {
   console.log(contact);
   $("#contact-list").prepend(
-    `<li>Nombre: ${contact.name} </li> <li> Tel: ${contact.wsp} </li>`
+    `<tr><td> ${contact.name} </td> <td> ${contact.wsp} </td> <td> ${contact.desc}</td></tr>`
   );
 }
