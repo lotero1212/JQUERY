@@ -37,3 +37,15 @@ for (let contact of contacts) {
     `<tr><td> ${contact.name} </td> <td> ${contact.wsp} </td> <td> ${contact.desc}</td></tr>`
   );
 }
+
+$("#mostrarBtn").click(function () {
+  $("#lista-contactos").fadeIn(500);
+  $("#mostrarBtn").hide(1000);
+  $("#ocultarBtn").show(1000);
+});
+
+$("#ocultarBtn").click(function () {
+  $("#lista-contactos").fadeOut(500);
+  $("#ocultarBtn").hide(1000);
+  $("#mostrarBtn").show(1000);
+});
